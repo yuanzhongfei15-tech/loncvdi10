@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文艺日程备忘录</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📅 文艺日程备忘录</h1>
+            <p class="subtitle">记录生活的美好瞬间</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="calendar-section">
+                <div class="calendar-header">
+                    <button class="nav-btn" id="prevMonth">&lt;</button>
+                    <h2 id="currentMonth"></h2>
+                    <button class="nav-btn" id="nextMonth">&gt;</button>
+                </div>
+                <div class="calendar-weekdays">
+                    <span>日</span>
+                    <span>一</span>
+                    <span>二</span>
+                    <span>三</span>
+                    <span>四</span>
+                    <span>五</span>
+                    <span>六</span>
+                </div>
+                <div class="calendar-grid" id="calendarGrid"></div>
+            </div>
+            
+            <div class="todo-section">
+                <div class="todo-header">
+                    <h3 id="selectedDate">今日待办</h3>
+                    <button class="add-btn" id="addTodoBtn">+ 添加日程</button>
+                </div>
+                <div class="todo-list" id="todoList"></div>
+            </div>
+        </div>
+        
+        <div class="modal" id="todoModal">
+            <div class="modal-content">
+                <h3>添加日程</h3>
+                <input type="text" id="todoTitle" placeholder="日程标题" maxlength="50">
+                <textarea id="todoDesc" placeholder="详细描述（可选）" rows="3" maxlength="200"></textarea>
+                <input type="time" id="todoTime">
+                <div class="modal-actions">
+                    <button class="btn-cancel" id="cancelBtn">取消</button>
+                    <button class="btn-save" id="saveBtn">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
